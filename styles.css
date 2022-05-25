@@ -1,0 +1,99 @@
+:root{
+    --dark: #4e4f4e;
+    --darker: #3e3e3e;
+    --grey: #686968;
+    --lighter: #c7c7c7;
+    --light: #adaaaa;
+    --cyan: #4795bf;
+    --dangerous-red: #db2a44;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background: linear-gradient(to left,var(--darker),var(--grey));
+    color: var(--lighter);
+}
+
+body {
+    max-width: 600px;
+    margin: auto auto 0 auto;
+}
+
+@media only screen and (min-width: 400px){
+    form {
+        display: flex;
+        justify-content: space-between;
+    }
+} 
+
+#task-submit {
+    color: var(--cyan);
+    font-weight: 900;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.task-action {
+    margin-bottom: 1.5rem;
+    background-color: var(--darker);
+    border-radius: 1rem;
+}
+
+@media only screen and (min-width: 230px){
+    .task-action {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+button {
+    height: 100%;
+    cursor: pointer;
+}
+
+input, button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+}
+
+#task-input, .task {
+    flex: 1 1 0%;
+    border-radius: 1rem;
+    background-color: var(--darker);
+    padding: 1rem;
+    margin-right: 5rem;
+    font-size: 1.25rem;
+}
+
+.task {
+    color: var(--light);
+    background-color: var(--dark);
+}
+
+.edit {
+    color: var(--cyan);
+    font-weight: 900;
+}
+
+.delete {
+    color: var(--dangerous-red);
+    font-weight: 1000;
+    margin-right: 1rem;
+}
+
+#task-submit:hover, .task-action .actions button:hover{
+    opacity: 0.9;
+}
+
+#task-submit:hover, .task-action .actions button:active{
+    opacity: 0.7;
+}
